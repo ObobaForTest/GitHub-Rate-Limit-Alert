@@ -32,7 +32,7 @@ jobs:
           echo "rate_remaining=$REMAINING" >> $GITHUB_OUTPUT
 
       - name: Send Email if Low
-        if: steps.rate_limit.outputs.rate_remaining != '' && steps.rate_limit.outputs.rate_remaining < 200
+        if: steps.rate_limit.outputs.rate_remaining != '' && steps.rate_limit.outputs.rate_remaining < 5000
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.office365.com
