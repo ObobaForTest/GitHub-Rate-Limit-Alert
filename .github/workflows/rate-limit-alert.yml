@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "GitHub Rate Limit Alert"
           to: davit.shanshashvili@external.danone.com, shanshashvili1@gamil.com
-          from: "GitHub Monitor <davit_shanshashvili@epam.com>"
+          from: "GitHub Monitor <davit.shanshashvili@external.danone.com>"
           body: |
             ⚠️ Warning: GitHub API rate limit is running low.
             
