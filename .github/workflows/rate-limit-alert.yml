@@ -37,11 +37,14 @@ jobs:
         with:
           server_address: smtp.office365.com
           server_port: 587
+          secure: true
+          
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
+          
           subject: "GitHub Rate Limit Alert"
           to: davit.shanshashvili@external.danone.com, shanshashvili1@gamil.com
-          from: "GitHub Monitor <davit.shanshashvili@external.danone.com>"
+          from: davit.shanshashvili@external.danone.com
           body: |
             ⚠️ Warning: GitHub API rate limit is running low.
             
@@ -49,3 +52,4 @@ jobs:
 
             Please check automation workflows or integrations that might be using the API.
 
+          priority: high
