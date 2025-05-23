@@ -33,7 +33,7 @@ jobs:
 
       - name: Send Email if Low
         if: steps.rate_limit.outputs.rate_remaining != '' && steps.rate_limit.outputs.rate_remaining < 5001
-        uses: dawidd6/action-send-mail@v5
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.office365.com
           server_port: 587
